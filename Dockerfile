@@ -4,6 +4,7 @@ ENV DENO_VERSION 0.1.1
 
 RUN addgroup -g 1000 deno \
     && adduser -u 1000 -G deno -s /bin/sh -D deno \
+    && apk update \
     && apk add --no-cache --virtual .build-deps \
         curl \
     && curl -fsSLO --compressed "https://github.com/denoland/deno/releases/download/v$DENO_VERSION/deno_linux_x64.gz" \
