@@ -1,4 +1,4 @@
-FROM buildpack-deps:jessie
+FROM alpine:3.8
 
 ENV DENO_VERSION 0.1.0
 
